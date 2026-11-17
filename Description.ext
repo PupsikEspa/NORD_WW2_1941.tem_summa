@@ -40,8 +40,8 @@ class CfgRemoteExec {
 
 //Discord info
 class CfgDiscordRichPresence {
-    applicationID="1243289776384249896";             // Provided by discord
-    defaultDetails="Nord | Курск";            // Upper text
+    applicationID="1296162577809936486";             // Provided by discord
+    defaultDetails="NORD WW2";            // Upper text
     defaultState="By NORD Project Team";              // Lower text  
     defaultLargeImageKey="th1q275iq7qzo4f1jr8jmq";      // Large image
     defaultLargeImageText="";     // Large image hover text
