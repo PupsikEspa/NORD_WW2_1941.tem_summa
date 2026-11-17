@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=60;
+		nextID=72;
 	};
 	class Camera
 	{
-		pos[]={137.58455,25.811615,6217.9878};
-		dir[]={0.20436527,-0.25322598,0.94560373};
-		up[]={0.053495537,0.96740997,0.24752419};
-		aside[]={0.97746205,1.4985562e-07,-0.21125151};
+		pos[]={138.35805,25.811615,6214.5762};
+		dir[]={-0.19910891,-0.43484178,0.87825108};
+		up[]={-0.096145123,0.9005093,0.42408812};
+		aside[]={0.975281,3.8879807e-07,0.22110528};
 	};
 };
 binarizationWanted=0;
@@ -276,6 +276,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -295,19 +308,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -464,6 +464,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="WhiteHead_06";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -475,7 +488,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -485,19 +498,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="WhiteHead_06";
 												};
 											};
 										};
@@ -1377,6 +1377,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1388,7 +1401,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1398,19 +1411,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
 												};
 											};
 										};
@@ -1947,6 +1947,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Pettka";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1958,7 +1971,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1968,19 +1981,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Pettka";
 												};
 											};
 										};
@@ -2312,6 +2312,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2323,7 +2336,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2333,19 +2346,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
 												};
 											};
 										};
