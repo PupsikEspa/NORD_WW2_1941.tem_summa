@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1472;
+		nextID=1483;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=72;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={138.35805,25.811615,6214.5762};
-		dir[]={-0.19910891,-0.43484178,0.87825108};
-		up[]={-0.096145123,0.9005093,0.42408812};
-		aside[]={0.975281,3.8879807e-07,0.22110528};
+		pos[]={4635.5068,37.467789,-137.05153};
+		dir[]={-0.68600678,-0.3329955,-0.64700466};
+		up[]={-0.24225445,0.94292933,-0.22848117};
+		aside[]={-0.68615615,-7.613562e-08,0.727521};
 	};
 };
 binarizationWanted=0;
@@ -64,13 +64,14 @@ addons[]=
 	"KUBANKA",
 	"NF_SOV_Uniforms",
 	"GEISTL_ASSETS_C_FLAGS",
-	"NORTH_SOV_caps"
+	"NORTH_SOV_caps",
+	"Structures_Globe_Signs_Directions"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			className="A3_Structures_F_EPA";
@@ -248,6 +249,13 @@ class AddonsMetaData
 			name="Northern Fronts - Caps";
 			author="Northern Fronts Mod";
 		};
+		class Item30
+		{
+			className="A3_Structures_F_Globe";
+			name="O&T Expansion Eden - Buildings and Structures";
+			author="Trager";
+			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
+		};
 	};
 };
 dlcs[]=
@@ -276,19 +284,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -308,6 +303,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -337,7 +345,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			dataType="Layer";
@@ -464,19 +472,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="WhiteHead_06";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -488,7 +483,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -498,6 +493,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="WhiteHead_06";
 												};
 											};
 										};
@@ -1205,7 +1213,7 @@ class Mission
 					name="Гараж";
 					class Entities
 					{
-						items=8;
+						items=7;
 						class Item0
 						{
 							dataType="Object";
@@ -1377,19 +1385,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1401,7 +1396,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1411,6 +1406,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
 												};
 											};
 										};
@@ -1639,66 +1647,6 @@ class Mission
 							};
 						};
 						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={136.80322,20.220875,6281.5151};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=1471;
-							type="Land_SM_01_shelter_wide_F";
-							atlOffset=3.6372671;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="ENH_objectScaling";
-									expression="    if (is3DEN) then    {        _this addEventHandler ['AttributesChanged3DEN',        {            params ['_object'];            _object setObjectScale ((_object get3DENAttribute 'ENH_objectScaling') # 0);        }];        _this addEventHandler ['Dragged3DEN',        {            params ['_object'];            _object setObjectScale ((_object get3DENAttribute 'ENH_objectScaling') # 0);        }];    };    if (!isMultiplayer && _value != 1) then {[_this, _value] spawn {sleep 0.5; (_this select 0) setObjectScale (_this select 1)}};";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=2;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item7
 						{
 							dataType="Object";
 							class PositionInfo
@@ -1947,19 +1895,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Pettka";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1971,7 +1906,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1981,6 +1916,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Pettka";
 												};
 											};
 										};
@@ -2312,19 +2260,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2336,7 +2271,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2346,6 +2281,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
 												};
 											};
 										};
@@ -2659,7 +2607,7 @@ class Mission
 					name="Гараж";
 					class Entities
 					{
-						items=9;
+						items=8;
 						class Item0
 						{
 							dataType="Comment";
@@ -3382,67 +3330,6 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item8
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4631.106,32.541939,-204.04201};
-								angles[]={0,3.2215636,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=1463;
-							type="Land_SM_01_shelter_wide_F";
-							atlOffset=-1.9073486e-06;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="ENH_objectScaling";
-									expression="    if (is3DEN) then    {        _this addEventHandler ['AttributesChanged3DEN',        {            params ['_object'];            _object setObjectScale ((_object get3DENAttribute 'ENH_objectScaling') # 0);        }];        _this addEventHandler ['Dragged3DEN',        {            params ['_object'];            _object setObjectScale ((_object get3DENAttribute 'ENH_objectScaling') # 0);        }];    };    if (!isMultiplayer && _value != 1) then {[_this, _value] spawn {sleep 0.5; (_this select 0) setObjectScale (_this select 1)}};";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=2;
 										};
 									};
 								};
@@ -20682,6 +20569,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4646.7925,32.208035,-181.06998};
+				angles[]={1.570181,0,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1479;
+			type="LandMarkTile_25";
+			atlOffset=2.7093143;
 		};
 	};
 };
