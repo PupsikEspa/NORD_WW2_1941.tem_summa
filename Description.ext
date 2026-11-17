@@ -1,0 +1,59 @@
+﻿enableDebugConsole = 1; // logged-in server administrators only
+respawn="BASE";
+respawnButton=1;
+respawnOnStart=-1;
+disabledAI=1;
+corpseManagerMode = 1; //включает менеджер удаления трупов
+corpseLimit = 2; //Количество трупов на карте при котором срабатывает удаление
+corpseRemovalMinTime = 300; //second
+corpseRemovalMaxTime = 600; //seconds
+ 
+wreckManagerMode = 1; //включает менеджер удаления техники
+wreckLimit = 1; //Количество подбитой техники на карте при котором срабатывает удаление
+wreckRemovalMinTime = 600; //second
+wreckRemovalMaxTime = 900; //seconds
+WW2_enableServer = 1;
+
+class CfgFunctions
+{
+    #include "ww2\config.hpp"
+};
+// Mod CfgRemoteExec entries from ACE/CBA are inherited. Only named mission endpoints are exposed.
+class CfgRemoteExec {
+ class Functions {
+  mode=1; jip=0;
+  class WW2_fnc_request {allowedTargets=2;};
+  class WW2_fnc_zeusEvent {allowedTargets=2;};
+  class WW2_fnc_zeusConfirm {allowedTargets=2;};
+  class WW2_fnc_zeusHudPresence {allowedTargets=2;};
+  class WW2_fnc_zeusHudState {allowedTargets=1;};
+  class WW2_fnc_ocapRequest {allowedTargets=2;};
+  class WW2_fnc_reply {allowedTargets=1;};
+  class WW2_fnc_applyLoadout {allowedTargets=1;};
+  class Nord_fnc_setGlobalFPS {allowedTargets=2;};
+ };
+ class Commands {mode=1; jip=0; class setPhysicsCollisionFlag {allowedTargets=0; jip=1;};};
+};
+
+#include "ww2\zeus_hud.hpp"
+
+//Discord info
+class CfgDiscordRichPresence {
+    applicationID="1243289776384249896";             // Provided by discord
+    defaultDetails="Nord | Курск";            // Upper text
+    defaultState="By NORD Project Team";              // Lower text  
+    defaultLargeImageKey="th1q275iq7qzo4f1jr8jmq";      // Large image
+    defaultLargeImageText="";     // Large image hover text
+    defaultSmallImageKey="";      // Small image
+    defaultSmallImageText="";     // Small image hover text
+    defaultButtons[]={};          // Button texts and urls
+    useTimeElapsed=1;             // Show time elapsed since the player connected (1 - true, 0 - false)
+};
+
+
+class CfgDebriefingSections {
+    class acex_killTracker {
+        title = "NORD ФРАГИ";
+        variable = "acex_killTracker_outputText";
+    };
+};
