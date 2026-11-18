@@ -10,7 +10,7 @@ sleep 11; //Время до начала титров
 _role1 = "Добро пожаловать на NORD WW 2";
 _role1names = [profileName];
 _role2 = "Игровой проект NORD WW 2";
-_role2names = ["Revived by Enthusiasts"];
+_role2names = ["NORD WW2"];
 _role3 = "Прекрасные создатели";
 _role3names = ["Giga, Fraer"];
 _role4 = "Присоединяйтесь к Discord";
