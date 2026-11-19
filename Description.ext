@@ -33,6 +33,7 @@ class CfgRemoteExec {
   class WW2_fnc_applyLoadout {allowedTargets=1;};
   class Nord_fnc_setGlobalFPS {allowedTargets=2;};
   // Frontline client-to-server requests
+  /*
   class FLS_fnc_artCall {allowedTargets=2;};
   class FLS_fnc_artStockSet {allowedTargets=2;};
   class FLS_fnc_baseSet {allowedTargets=2;};
@@ -74,6 +75,7 @@ class CfgRemoteExec {
   class FLS_fnc_whZeusOpen {allowedTargets=1;};
   class FLS_fnc_zeusMsg {allowedTargets=1;};
   class FLS_fnc_nf_scStartClient {allowedTargets=1; jip=1;};
+  */
  };
  class Commands {mode=1; jip=0; class setPhysicsCollisionFlag {allowedTargets=0; jip=1;};};
 };
