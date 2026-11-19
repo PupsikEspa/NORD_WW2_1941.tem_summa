@@ -1,4 +1,4 @@
-﻿enableDebugConsole = 1; // logged-in server administrators only
+enableDebugConsole = 1; // logged-in server administrators only
 respawn="BASE";
 respawnButton=1;
 respawnOnStart=-1;
@@ -19,7 +19,7 @@ class CfgFunctions
 {
     #include "ww2\config.hpp"
 };
-// Mod CfgRemoteExec entries from ACE/CBA are inherited. Only named mission endpoints are exposed.
+// Mission-level remote-execution whitelist. Frontline endpoints are listed explicitly.
 class CfgRemoteExec {
  class Functions {
   mode=1; jip=0;
@@ -32,6 +32,48 @@ class CfgRemoteExec {
   class WW2_fnc_reply {allowedTargets=1;};
   class WW2_fnc_applyLoadout {allowedTargets=1;};
   class Nord_fnc_setGlobalFPS {allowedTargets=2;};
+  // Frontline client-to-server requests
+  class FLS_fnc_artCall {allowedTargets=2;};
+  class FLS_fnc_artStockSet {allowedTargets=2;};
+  class FLS_fnc_baseSet {allowedTargets=2;};
+  class FLS_fnc_cmdSet {allowedTargets=2;};
+  class FLS_fnc_drgSet {allowedTargets=2;};
+  class FLS_fnc_fortSet {allowedTargets=2;};
+  class FLS_fnc_garageIssue {allowedTargets=2;};
+  class FLS_fnc_garageReq {allowedTargets=2;};
+  class FLS_fnc_garageStore {allowedTargets=2;};
+  class FLS_fnc_garageZeus {allowedTargets=2;};
+  class FLS_fnc_opAddTime {allowedTargets=2;};
+  class FLS_fnc_opFinish {allowedTargets=2;};
+  class FLS_fnc_opStart {allowedTargets=2;};
+  class FLS_fnc_opZoneSet {allowedTargets=2;};
+  class FLS_fnc_pointCreate {allowedTargets=2;};
+  class FLS_fnc_pointRemove {allowedTargets=2;};
+  class FLS_fnc_pointRemoveAll {allowedTargets=2;};
+  class FLS_fnc_pointSet {allowedTargets=2;};
+  class FLS_fnc_serverRequest {allowedTargets=2;};
+  class FLS_fnc_waveCall {allowedTargets=2;};
+  class FLS_fnc_wavesSet {allowedTargets=2;};
+  class FLS_fnc_whIssue {allowedTargets=2;};
+  class FLS_fnc_whReq {allowedTargets=2;};
+  class FLS_fnc_whStoreCrate {allowedTargets=2;};
+  class FLS_fnc_whZeus {allowedTargets=2;};
+  class FLS_fnc_zoneAlert {allowedTargets=2;};
+  // Frontline server-to-client messages and displays
+  class BIS_fnc_error {allowedTargets=1;};
+  class FLS_fnc_artSound {allowedTargets=1;};
+  class FLS_fnc_banner {allowedTargets=1;};
+  class FLS_fnc_captureMessage {allowedTargets=1;};
+  class FLS_fnc_chat {allowedTargets=1;};
+  class FLS_fnc_garageOpen {allowedTargets=1;};
+  class FLS_fnc_notice {allowedTargets=1;};
+  class FLS_fnc_opBriefing {allowedTargets=1;};
+  class FLS_fnc_opResults {allowedTargets=1;};
+  class FLS_fnc_waveJump {allowedTargets=1;};
+  class FLS_fnc_whOpen {allowedTargets=1;};
+  class FLS_fnc_whZeusOpen {allowedTargets=1;};
+  class FLS_fnc_zeusMsg {allowedTargets=1;};
+  class FLS_fnc_nf_scStartClient {allowedTargets=1; jip=1;};
  };
  class Commands {mode=1; jip=0; class setPhysicsCollisionFlag {allowedTargets=0; jip=1;};};
 };
