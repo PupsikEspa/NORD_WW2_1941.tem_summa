@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=594;
+		nextID=619;
 	};
 	class Camera
 	{
-		pos[]={4428.8613,93.113724,169.30585};
-		dir[]={0.72806805,-0.68330115,0.056128532};
-		up[]={0.68132395,0.73009878,0.052525118};
-		aside[]={0.07686846,2.2719905e-07,-0.99711579};
+		pos[]={368.15421,98.446884,5881.043};
+		dir[]={-0.074366629,-0.84774828,0.52516216};
+		up[]={-0.11886144,0.53039736,0.83937514};
+		aside[]={0.99012393,-1.9266736e-08,0.14020841};
 	};
 };
 binarizationWanted=0;
@@ -120,13 +120,15 @@ addons[]=
 	"WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2",
 	"CUP_Misc_e_Config",
 	"A3_Props_F_Decade_Industrial_Agriculture",
-	"WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz"
+	"WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz",
+	"A3_Weapons_F",
+	"WW2_Assets_c_Weapons_InfantryWeapons_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=79;
+		items=81;
 		class Item0
 		{
 			className="A3_Structures_F_EPA";
@@ -581,6 +583,18 @@ class AddonsMetaData
 			className="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
 			name="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
 		};
+		class Item79
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item80
+		{
+			className="WW2_Assets_c_Weapons_InfantryWeapons_c";
+			name="WW2_Assets_c_Weapons_InfantryWeapons_c";
+		};
 	};
 };
 dlcs[]=
@@ -606,10 +620,36 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_saveLoadout";
+			expression="_value = [0, 1, 2, 3] select _value;    if (!isMultiplayer || _value == 0 || is3DEN || !hasInterface) exitWith {};    _value spawn    {        params ['_value'];        waitUntil [{!isNull player}, -1, 1];        switch _value do        {            case 1:            {                player setVariable ['ENH_SavedLoadout', getUnitloadout player];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];            };            case 2:            {                player addEventHandler ['Killed',  {player setVariable ['ENH_SavedLoadout', getUnitLoadout player]}];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];            };            case 3:            {" \n "                player setVariable ['ENH_SavedLoadout', getUnitloadout player];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];                                [missionNamespace, 'arsenalClosed', {player setVariable ['ENH_SavedLoadout', getUnitloadout player]}] call BIS_fnc_addScriptedEventHandler;            };" \n "            default {};        };    };";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute2
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -633,20 +673,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		nAttributes=2;
+		nAttributes=3;
 	};
 };
 class Mission
@@ -800,19 +827,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="WhiteHead_06";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -824,7 +838,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -834,6 +848,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="WhiteHead_06";
 												};
 											};
 										};
@@ -1404,19 +1431,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1428,7 +1442,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1438,6 +1452,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
 												};
 											};
 										};
@@ -1724,7 +1751,7 @@ class Mission
 							};
 							id=4911;
 							type="Land_BatteryPack_01_closed_black_F";
-							atlOffset=1.0301466;
+							atlOffset=1.025197;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -1771,7 +1798,7 @@ class Mission
 						};
 					};
 					id=134;
-					atlOffset=0.40116692;
+					atlOffset=0.3655777;
 				};
 				class Item3
 				{
@@ -1959,19 +1986,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Pettka";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1983,7 +1997,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1993,6 +2007,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Pettka";
 												};
 											};
 										};
@@ -2223,7 +2250,7 @@ class Mission
 						};
 					};
 					id=1451;
-					atlOffset=0.50021172;
+					atlOffset=0.43715668;
 				};
 				class Item5
 				{
@@ -2345,19 +2372,6 @@ class Mission
 										};
 										class Attribute3
 										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
-												};
-											};
-										};
-										class Attribute4
-										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2369,7 +2383,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute5
+										class Attribute4
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2379,6 +2393,19 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
+												};
+											};
+										};
+										class Attribute5
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
 												};
 											};
 										};
@@ -2674,11 +2701,11 @@ class Mission
 						};
 					};
 					id=1458;
-					atlOffset=0.6338377;
+					atlOffset=0.24322987;
 				};
 			};
 			id=118;
-			atlOffset=-0.9258709;
+			atlOffset=-1.2465115;
 		};
 		class Item1
 		{
@@ -3320,7 +3347,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4527.5342,23.631874,215.90596};
-								angles[]={0,2.2870448,-0};
+								angles[]={0,2.2870448,0};
 							};
 							side="Empty";
 							class Attributes
@@ -3377,7 +3404,7 @@ class Mission
 						};
 					};
 					id=728;
-					atlOffset=0.22279739;
+					atlOffset=-0.087997437;
 				};
 				class Item1
 				{
@@ -4068,7 +4095,7 @@ class Mission
 						};
 					};
 					id=1448;
-					atlOffset=0.82274628;
+					atlOffset=0.54849243;
 				};
 				class Item5
 				{
@@ -4442,7 +4469,7 @@ class Mission
 						};
 					};
 					id=1450;
-					atlOffset=0.46999931;
+					atlOffset=0.41170692;
 				};
 				class Item6
 				{
@@ -4494,7 +4521,7 @@ class Mission
 				};
 			};
 			id=727;
-			atlOffset=0.087085724;
+			atlOffset=0.041637421;
 		};
 		class Item2
 		{
@@ -4824,7 +4851,7 @@ class Mission
 				};
 			};
 			id=2445;
-			atlOffset=0.67425013;
+			atlOffset=-5.9300747;
 		};
 		class Item3
 		{
@@ -9537,7 +9564,7 @@ class Mission
 				};
 			};
 			id=3465;
-			atlOffset=-1.001976;
+			atlOffset=-0.0050621033;
 		};
 		class Item82
 		{
@@ -9761,7 +9788,7 @@ class Mission
 				};
 			};
 			id=3492;
-			atlOffset=-1.6185436;
+			atlOffset=0.50510597;
 		};
 		class Item85
 		{
@@ -13820,7 +13847,7 @@ class Mission
 				};
 			};
 			id=3810;
-			atlOffset=0.63351822;
+			atlOffset=-0.048400879;
 		};
 		class Item227
 		{
@@ -22286,6 +22313,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4565;
@@ -22382,6 +22410,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4566;
@@ -22478,6 +22507,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4567;
@@ -22574,6 +22604,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4568;
@@ -22670,6 +22701,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4569;
@@ -22766,6 +22798,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4570;
@@ -22862,6 +22895,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4571;
@@ -22971,6 +23005,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4572;
@@ -23067,6 +23102,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4573;
@@ -23163,6 +23199,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4574;
@@ -23292,6 +23329,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4576;
@@ -23388,6 +23426,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4577;
@@ -23484,6 +23523,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4578;
@@ -23580,6 +23620,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4579;
@@ -23676,6 +23717,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4580;
@@ -23772,6 +23814,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4581;
@@ -23868,6 +23911,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4582;
@@ -23964,6 +24008,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4583;
@@ -24073,6 +24118,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4584;
@@ -24169,6 +24215,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4585;
@@ -24265,6 +24312,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4586;
@@ -24361,6 +24409,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4587;
@@ -24457,6 +24506,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4588;
@@ -24566,6 +24616,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4589;
@@ -24662,6 +24713,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4590;
@@ -24791,6 +24843,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4592;
@@ -24887,6 +24940,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4593;
@@ -24983,6 +25037,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4594;
@@ -25079,6 +25134,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4595;
@@ -25175,6 +25231,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4596;
@@ -25271,6 +25328,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4597;
@@ -25380,6 +25438,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4598;
@@ -25475,6 +25534,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4599;
@@ -25570,6 +25630,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4600;
@@ -25665,6 +25726,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4601;
@@ -25760,6 +25822,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4602;
@@ -25856,6 +25919,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4603;
@@ -25965,6 +26029,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4604;
@@ -26061,6 +26126,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4605;
@@ -26156,6 +26222,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4606;
@@ -26284,6 +26351,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4608;
@@ -26379,6 +26447,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4609;
@@ -26475,6 +26544,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4610;
@@ -26571,6 +26641,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4611;
@@ -26667,6 +26738,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4612;
@@ -26763,6 +26835,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4613;
@@ -26859,6 +26932,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4614;
@@ -26968,6 +27042,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4615;
@@ -27064,6 +27139,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4616;
@@ -27160,6 +27236,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4617;
@@ -27288,6 +27365,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4619;
@@ -27396,6 +27474,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4620;
@@ -27504,6 +27583,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4621;
@@ -27612,6 +27692,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4622;
@@ -27720,6 +27801,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4623;
@@ -27828,6 +27910,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4624;
@@ -27949,6 +28032,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4625;
@@ -28058,6 +28142,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4626;
@@ -28167,6 +28252,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4627;
@@ -28275,6 +28361,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4628;
@@ -28384,6 +28471,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4629;
@@ -28492,6 +28580,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4630;
@@ -28613,6 +28702,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4631;
@@ -28721,6 +28811,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4632;
@@ -28829,6 +28920,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4633;
@@ -28970,6 +29062,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4635;
@@ -29079,6 +29172,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4636;
@@ -29187,6 +29281,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4637;
@@ -29295,6 +29390,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4638;
@@ -29403,6 +29499,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4639;
@@ -29512,6 +29609,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4640;
@@ -29621,6 +29719,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4641;
@@ -29729,6 +29828,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4642;
@@ -29837,6 +29937,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4643;
@@ -29945,6 +30046,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4644;
@@ -30086,6 +30188,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4646;
@@ -30182,6 +30285,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4647;
@@ -30278,6 +30382,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4648;
@@ -30373,6 +30478,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4649;
@@ -30468,6 +30574,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4650;
@@ -30563,6 +30670,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4651;
@@ -30659,6 +30767,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4652;
@@ -30755,6 +30864,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4653;
@@ -30864,6 +30974,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4654;
@@ -30960,6 +31071,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4655;
@@ -31056,6 +31168,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4656;
@@ -31151,6 +31264,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4657;
@@ -31247,6 +31361,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4658;
@@ -31356,6 +31471,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4659;
@@ -31452,6 +31568,7 @@ class Mission
 								typeName="ff_m40_feldbluse_roll";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4660;
@@ -31581,6 +31698,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4662;
@@ -31664,6 +31782,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4663;
@@ -31747,6 +31866,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4664;
@@ -31830,6 +31950,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4665;
@@ -31913,6 +32034,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4666;
@@ -31996,6 +32118,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4667;
@@ -32079,6 +32202,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4668;
@@ -32162,6 +32286,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4669;
@@ -32258,6 +32383,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4670;
@@ -32341,6 +32467,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4671;
@@ -32456,6 +32583,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4673;
@@ -32539,6 +32667,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4674;
@@ -32622,6 +32751,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4675;
@@ -32704,6 +32834,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4676;
@@ -32786,6 +32917,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4677;
@@ -32868,6 +33000,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4678;
@@ -32950,6 +33083,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4679;
@@ -33033,6 +33167,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4680;
@@ -33115,6 +33250,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4681;
@@ -33198,6 +33334,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4682;
@@ -33281,6 +33418,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4683;
@@ -33363,6 +33501,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4684;
@@ -33446,6 +33585,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4685;
@@ -33528,6 +33668,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4686;
@@ -33624,6 +33765,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4687;
@@ -33752,6 +33894,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4689;
@@ -33835,6 +33978,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4690;
@@ -33918,6 +34062,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4691;
@@ -34001,6 +34146,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4692;
@@ -34084,6 +34230,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4693;
@@ -34167,6 +34314,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4694;
@@ -34250,6 +34398,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4695;
@@ -34333,6 +34482,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4696;
@@ -34416,6 +34566,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4697;
@@ -34499,6 +34650,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4698;
@@ -34582,6 +34734,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4699;
@@ -34665,6 +34818,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4700;
@@ -34748,6 +34902,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4701;
@@ -34831,6 +34986,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4702;
@@ -34927,6 +35083,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4703;
@@ -35056,6 +35213,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4705;
@@ -35139,6 +35297,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4706;
@@ -35222,6 +35381,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4707;
@@ -35305,6 +35465,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4708;
@@ -35388,6 +35549,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4709;
@@ -35471,6 +35633,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4710;
@@ -35554,6 +35717,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4711;
@@ -35637,6 +35801,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4712;
@@ -35720,6 +35885,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4713;
@@ -35803,6 +35969,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4714;
@@ -35886,6 +36053,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4715;
@@ -35969,6 +36137,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4716;
@@ -36052,6 +36221,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4717;
@@ -36135,6 +36305,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4718;
@@ -36231,6 +36402,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4719;
@@ -36360,6 +36532,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4721;
@@ -36456,6 +36629,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4722;
@@ -36552,6 +36726,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4723;
@@ -36648,6 +36823,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4724;
@@ -36744,6 +36920,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4725;
@@ -36840,6 +37017,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4726;
@@ -36936,6 +37114,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4727;
@@ -37032,6 +37211,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4728;
@@ -37128,6 +37308,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4729;
@@ -37224,6 +37405,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4730;
@@ -37320,6 +37502,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4731;
@@ -37416,6 +37599,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4732;
@@ -37512,6 +37696,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4733;
@@ -37608,6 +37793,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4734;
@@ -37717,6 +37903,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4735;
@@ -37859,6 +38046,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4737;
@@ -37955,6 +38143,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4738;
@@ -38051,6 +38240,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4739;
@@ -38147,6 +38337,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4740;
@@ -38242,6 +38433,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4741;
@@ -38338,6 +38530,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4742;
@@ -38434,6 +38627,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4743;
@@ -38529,6 +38723,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4744;
@@ -38625,6 +38820,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4745;
@@ -38720,6 +38916,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4746;
@@ -38849,6 +39046,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4748;
@@ -38931,6 +39129,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4749;
@@ -39013,6 +39212,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4750;
@@ -39095,6 +39295,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4751;
@@ -39178,6 +39379,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4752;
@@ -39261,6 +39463,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4753;
@@ -39344,6 +39547,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4754;
@@ -39427,6 +39631,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4755;
@@ -39523,6 +39728,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4756;
@@ -39606,6 +39812,7 @@ class Mission
 								typeName="U_NORTH_SOV_Obr35_Uniform_Early_TNK_Private";
 								isBackpack=0;
 							};
+							map="ItemMap";
 						};
 					};
 					id=4757;
