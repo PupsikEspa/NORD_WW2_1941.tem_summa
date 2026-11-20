@@ -40,7 +40,7 @@ player addEventHandler ["Respawn", {
 		}
 }];
 */
-
+/*
 // Replace with custom damage event handler
 player setVariable [
 	"ACE_medical_HandleDamageEHID", 
@@ -98,3 +98,4 @@ player setVariable [
 		_this call ACE_medical_engine_fnc_handleDamage;
 	}]
 ];
+*/
