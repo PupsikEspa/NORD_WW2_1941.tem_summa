@@ -26,7 +26,7 @@ if(!hasInterface) exitWith {}; // If headless then exit
 
 
 // Remove existing ace medical damage event handler
-player removeEventHandler ["HandleDamage", player getVariable ["ACE_medical_HandleDamageEHID", -1]];
+//player removeEventHandler ["HandleDamage", player getVariable ["ACE_medical_HandleDamageEHID", -1]];
 
 /*
 _id = ["ace_arsenal_onLoadoutLoad", {

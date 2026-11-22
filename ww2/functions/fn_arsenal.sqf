@@ -1,7 +1,12 @@
 disableSerialization;
 params ["_unit", "_token", "_items", "_seconds"];
 if (_unit != player || {!alive _unit} || {!local _unit}) exitWith {};
+uiNamespace setVariable ["WW2_lastArsenalToken",_token];
 private _finish = {
+ private _active = uiNamespace getVariable ["WW2_activeArsenal",[]];
+ if (_active isNotEqualTo [] && {(_active select 0) isEqualTo _unit} && {(_active select 1) isEqualTo _token}) then {
+  uiNamespace setVariable ["WW2_activeArsenal",nil];
+ };
  [_unit, "arsenalClose", _token, []] remoteExecCall ["WW2_fnc_request", 2];
 };
 if (isNil "ace_arsenal_fnc_openBox" || {isNil "ace_arsenal_fnc_initBox"}) exitWith {
@@ -33,9 +38,20 @@ if (isNull _display) exitWith {
   diag_log "[WW2 Arsenal] ACE display did not open.";
  };
 };
+uiNamespace setVariable ["WW2_activeArsenal",[_unit,_token,_display]];
 [_unit, "arsenalOpened", _token, []] remoteExecCall ["WW2_fnc_request", 2];
-private _deadline = diag_tickTime + _seconds;
-waitUntil {uiSleep 0.1; isNull _display || {!alive _unit} || {player != _unit} || {diag_tickTime >= _deadline}};
+// Keep the server lease alive while this exact ACE display remains open.
+// There is no total-duration deadline for choosing equipment.
+private _nextHeartbeat = diag_tickTime + 15;
+waitUntil {
+ uiSleep 0.1;
+ private _finished = isNull _display || {!alive _unit} || {player != _unit};
+ if (!_finished && {diag_tickTime >= _nextHeartbeat}) then {
+  [_unit, "arsenalAlive", _token, []] remoteExecCall ["WW2_fnc_request", 2];
+  _nextHeartbeat = diag_tickTime + 15;
+ };
+ _finished
+};
 if (!isNull _display) then {_display closeDisplay 2};
 deleteVehicle _box;
 uiSleep 0.5;
