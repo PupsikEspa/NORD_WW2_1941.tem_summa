@@ -14,12 +14,12 @@ CHBN_adjustBrightness = 1;
 CHBN_adjustColor = [0.5,0.7,1];
 
 
-0 enableChannel [false, true];
-1 enableChannel [false, true];
-2 enableChannel [false, true];
-4 enableChannel [false, true];
-5 enableChannel [true, true];
-6 enableChannel [false, true];
+0 enableChannel [false, false];
+1 enableChannel [false, false];
+2 enableChannel [false, false];
+3 enableChannel [true, false];
+4 enableChannel [false, false];
+5 enableChannel [true, false];
 
 
 // Spawn limits and trophy lifecycle are tracked by the database service.
