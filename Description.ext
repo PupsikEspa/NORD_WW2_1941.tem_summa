@@ -7,7 +7,7 @@ corpseManagerMode = 1; //включает менеджер удаления тр
 corpseLimit = 2; //Количество трупов на карте при котором срабатывает удаление
 corpseRemovalMinTime = 300; //second
 corpseRemovalMaxTime = 600; //seconds
-
+enableDebugConsole[] = { "76561199425551901", "76561198201205878" };
  
 wreckManagerMode = 1; //включает менеджер удаления техники
 wreckLimit = 1; //Количество подбитой техники на карте при котором срабатывает удаление
