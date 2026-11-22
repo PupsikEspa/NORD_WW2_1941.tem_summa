@@ -6,7 +6,7 @@
 
 //[] execVM "ROS_hitreaction\scripts\ROS_HitReaction.sqf";
 
-CHVD_terrain = 48.99;
+CHVD_terrain = 3.125;
 CHVD_allowNoGrass = false;
 
 //Светлая ночь
