@@ -18,7 +18,7 @@ CHBN_adjustColor = [0.5,0.7,1];
 1 enableChannel [false, true];
 2 enableChannel [false, true];
 4 enableChannel [false, true];
-5 enableChannel [false, true];
+5 enableChannel [true, true];
 6 enableChannel [false, true];
 
 
