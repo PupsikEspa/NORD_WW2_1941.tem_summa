@@ -21,7 +21,7 @@ class CfgFunctions
 // Mission-level remote-execution whitelist. Frontline endpoints are listed explicitly.
 class CfgRemoteExec {
  class Functions {
-  mode=1; jip=0;
+  mode=2; jip=0;
   class WW2_fnc_request {allowedTargets=2;};
   class WW2_fnc_zeusEvent {allowedTargets=2;};
   class WW2_fnc_zeusConfirm {allowedTargets=2;};
@@ -74,7 +74,7 @@ class CfgRemoteExec {
   class FLS_fnc_zeusMsg {allowedTargets=1;};
   class FLS_fnc_nf_scStartClient {allowedTargets=1; jip=1;};
  };
- class Commands {mode=1; jip=0; class setPhysicsCollisionFlag {allowedTargets=0; jip=1;};};
+ class Commands {mode=2; jip=0; class setPhysicsCollisionFlag {allowedTargets=0; jip=1;};};
 };
 
 #include "ww2\zeus_hud.hpp"
