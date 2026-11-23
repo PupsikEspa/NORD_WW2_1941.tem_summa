@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=6450;
+		nextID=6458;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=810;
+		nextID=838;
 	};
 	class Camera
 	{
-		pos[]={367.22708,18.72333,5930.0425};
-		dir[]={-0.68896198,-0.52238929,-0.50245631};
-		up[]={-0.4220714,0.85270345,-0.30781442};
-		aside[]={-0.58924639,8.7427907e-08,0.8079651};
+		pos[]={1194.4807,888.8244,4043.229};
+		dir[]={-0.63907027,-0.54078662,-0.54694915};
+		up[]={-0.41086376,0.84115362,-0.35163829};
+		aside[]={-0.65022862,-7.7416189e-08,0.75974375};
 	};
 };
 binarizationWanted=0;
@@ -713,7 +713,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=401;
+		items=403;
 		class Item0
 		{
 			dataType="Layer";
@@ -841,6 +841,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="WhiteHead_06";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -852,7 +865,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -862,19 +875,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="WhiteHead_06";
 												};
 											};
 										};
@@ -1445,6 +1445,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1456,7 +1469,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1466,19 +1479,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
 												};
 											};
 										};
@@ -2000,6 +2000,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Pettka";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2011,7 +2024,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2021,19 +2034,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Pettka";
 												};
 											};
 										};
@@ -2375,6 +2375,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="AfricanHead_01";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2386,7 +2399,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2396,19 +2409,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="AfricanHead_01";
 												};
 											};
 										};
@@ -2774,6 +2774,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2785,7 +2798,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2795,19 +2808,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
 												};
 											};
 										};
@@ -8434,8 +8434,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={351.00095,10.629354,5925.9741};
-				angles[]={0.019996032,0.71573502,6.2598543};
+				position[]={351.00143,10.630237,5925.9746};
+				angles[]={0.020001473,0.71574205,6.25985};
 			};
 			side="Empty";
 			flags=4;
@@ -8444,7 +8444,6 @@ class Mission
 			};
 			id=2813;
 			type="Land_WoodenBox_F";
-			atlOffset=1.9073486e-06;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8469,7 +8468,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[""LIB_TMI_42_MINE_mag"",""LIB_shumine_42_MINE_mag""],[5,20]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[""LIB_TMI_42_MINE_mag"",""LIB_shumine_42_MINE_mag""],[5,20]],[[""FLS_Hammer_West""],[2]],[[],[]]],false]";
 						};
 					};
 				};
@@ -8536,12 +8535,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={365.83182,8.8432322,5924.9492};
-				angles[]={6.2099833,2.8975611,6.1245303};
+				position[]={368.67032,8.1342239,5920.3193};
+				angles[]={6.223258,2.8975611,6.1473598};
 			};
 			id=2815;
 			type="FLS_Module_Warehouse";
-			atlOffset=2.9563904e-05;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8578,8 +8576,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4565.7339,22.465757,198.5416};
-				angles[]={0.0033296358,4.2077904,6.1802182};
+				position[]={4532.5991,23.634047,198.40265};
+				angles[]={0.023335053,4.2077971,0.036651913};
 			};
 			side="Empty";
 			flags=4;
@@ -8588,7 +8586,7 @@ class Mission
 			};
 			id=2817;
 			type="Land_WoodenBox_F";
-			atlOffset=9.3460083e-05;
+			atlOffset=-0.0020008087;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8613,7 +8611,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[""LIB_TMI_42_MINE_mag"",""LIB_PMD6_MINE_mag""],[5,20]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[""LIB_TMI_42_MINE_mag"",""LIB_PMD6_MINE_mag""],[5,20]],[[""FLS_Hammer_East""],[2]],[[],[]]],false]";
 						};
 					};
 				};
@@ -8625,12 +8623,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4564.2119,22.623482,203.61223};
-				angles[]={6.2798557,0,6.1802182};
+				position[]={4533.6919,23.645056,199.64};
+				angles[]={0.013334315,0,0.010000736};
 			};
 			id=2818;
 			type="FLS_Module_Warehouse";
-			atlOffset=3.0517578e-05;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8667,8 +8664,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4565.0991,22.524618,201.45859};
-				angles[]={6.2798557,0,6.1802182};
+				position[]={4532.6338,23.668226,196.37601};
+				angles[]={0.013334315,0,0.036651913};
 			};
 			id=2819;
 			type="FLS_Module_SupplyTemplate";
@@ -15631,7 +15628,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={348.05853,12.1705,5923.2993};
+				position[]={348.0304,12.172056,5923.3535};
 				angles[]={0.02666023,0.7489453,6.1769209};
 			};
 			side="Empty";
@@ -23525,1479 +23522,6 @@ class Mission
 		};
 		class Item374
 		{
-			dataType="Layer";
-			name="Точки-укрепления";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Высота 23";
-					class Entities
-					{
-						items=41;
-						class Item0
-						{
-							dataType="Comment";
-							class PositionInfo
-							{
-								position[]={2774.116,14.702,1597.2841};
-							};
-							title="Высота 23";
-							description="Высота 23";
-							id=4932;
-							atlOffset=2.1934509e-05;
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2737.7083,19.730005,1760.682};
-								angles[]={0,5.9011183,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4934;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=-0.18214417;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2731.4231,19.52313,1649.1433};
-								angles[]={0,5.122715,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4935;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=0.05623436;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2768.3616,15.63305,1605.5642};
-								angles[]={0,1.5187674,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4936;
-							type="land_NORTH_S_TrenchCorner";
-							atlOffset=1.5910473;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2573.9524,14.25707,1766.7837};
-								angles[]={0,5.2068996,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4937;
-							type="land_NORTH_S_TrenchCorner";
-							atlOffset=-0.13812542;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2664,9.0267324,1670};
-								angles[]={0,2.0173368,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4938;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=0.23666573;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2737.7412,19.309528,1648.7633};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4939;
-							type="land_NORTH_S_TrenchT";
-							atlOffset=-0.17070389;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2741.3704,19.700615,1758.1105};
-								angles[]={0,3.8469214,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4941;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=-0.11091232;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item8
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2502.123,15.248592,1644.9598};
-								angles[]={0,4.1004739,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4942;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=0.041325569;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item9
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2503.8484,15.288918,1649.1111};
-								angles[]={0,2.0462766,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4948;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=-0.068730354;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item10
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2769.9917,10.354311,1605.6698};
-								angles[]={0,4.7523751,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4949;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=-3.8067102;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item11
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2577.0908,14.383368,1772.0894};
-								angles[]={0,2.198669,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4950;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=0.077812195;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item12
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2579.0952,14.277085,1763.9529};
-								angles[]={0,3.5984304,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4953;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=0.057011604;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item13
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2763.6824,10.895443,1603.3102};
-								angles[]={0,0.44667065,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4954;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=-3.0153131;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item14
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2512.2188,15.313973,1651.8538};
-								angles[]={0,3.6444788,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4956;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=0.22322464;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item15
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2768.0342,15.480516,1597.455};
-								angles[]={0,1.5548068,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4957;
-							type="land_NORTH_S_TrenchT";
-							atlOffset=1.1961346;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item16
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2755.6968,15.262878,1597.3719};
-								angles[]={0,4.6808076,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4958;
-							type="land_NORTH_S_TrenchT";
-							atlOffset=1.1921635;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item17
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2506.939,15.316003,1654.342};
-								angles[]={0,0.48731676,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4959;
-							type="land_NORTH_S_TrenchCorner";
-							atlOffset=0.052671432;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item18
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2726.8789,18.983727,1642.7759};
-								angles[]={0,2.0513737,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4961;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=-0.022729874;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item19
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2745.6091,18.838762,1649.3457};
-								angles[]={0,0.11073609,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4962;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=-0.083934784;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item20
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2668,8.6757755,1678};
-								angles[]={0,5.199924,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4963;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=0.34666443;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item21
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2661,8.6757755,1663};
-								angles[]={0,1.9790292,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4964;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=0.55333614;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item22
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2586.7229,13.718561,1759.8729};
-								angles[]={0,0.52882332,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4965;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=0.28937054;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item23
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2582.2283,14.086504,1779.2913};
-								angles[]={0,5.2996459,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4966;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=0.42159462;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item24
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2730.3867,19.353102,1759.0308};
-								angles[]={0,2.7690153,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4967;
-							type="land_NORTH_S_TrenchEntrance";
-							atlOffset=0.39477539;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item25
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2754.843,15.597824,1605.5432};
-								angles[]={0,6.2095823,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4968;
-							type="land_NORTH_S_TrenchCorner";
-							atlOffset=1.4517441;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item26
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2762.0117,15.527535,1605.7725};
-								angles[]={0,0.02576369,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4969;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=1.6079159;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item27
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2761.9937,15.424375,1597.3495};
-								angles[]={0,6.2485189,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4970;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=1.166605;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item28
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2755.6553,15.535592,1577.671};
-								angles[]={0,4.655786,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4971;
-							type="land_NORTH_S_TrenchCorner";
-							atlOffset=0.10107517;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item29
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2754.0256,10.256853,1577.558};
-								angles[]={0,1.6062081,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4972;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=-5.0796461;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item30
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2760.324,10.797985,1579.9464};
-								angles[]={0,3.5836892,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4973;
-							type="land_NORTH_S_TrenchCorner60";
-							atlOffset=-4.7518272;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item31
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2755.9456,15.383059,1585.7817};
-								angles[]={0,4.6918254,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4974;
-							type="land_NORTH_S_TrenchT";
-							atlOffset=0.58393097;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item32
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2768.2825,15.165421,1585.9211};
-								angles[]={0,1.5346406,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4975;
-							type="land_NORTH_S_TrenchT";
-							atlOffset=-0.064640999;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item33
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2769.1736,15.500365,1577.7539};
-								angles[]={0,3.0634155,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4976;
-							type="land_NORTH_S_TrenchCorner";
-							atlOffset=-0.49906921;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item34
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2762.0061,15.430078,1577.4918};
-								angles[]={0,3.1627822,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4977;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=-0.39731884;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item35
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2761.9856,15.326917,1585.9148};
-								angles[]={0,3.1023521,0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=4978;
-							type="land_NORTH_S_TrenchShort";
-							atlOffset=0.19263172;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item36
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={2761.8999,14.864213,1592.054};
-							};
-							areaSize[]={22,0,22};
-							flags=1;
-							id=4979;
-							type="ModuleHideTerrainObjects_F";
-							atlOffset=0.00085067749;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="#filter";
-									expression="_this setVariable [""#filter"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=15;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="#hideLocally";
-									expression="_this setVariable [""#hideLocally"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item37
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={2736.5032,19.697554,1649.4069};
-							};
-							areaSize[]={22,0,22};
-							flags=1;
-							id=4980;
-							type="ModuleHideTerrainObjects_F";
-							atlOffset=-3.8146973e-06;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="#filter";
-									expression="_this setVariable [""#filter"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=15;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="#hideLocally";
-									expression="_this setVariable [""#hideLocally"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item38
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={2736.3035,20.026922,1757.2175};
-							};
-							areaSize[]={22,0,22};
-							flags=1;
-							id=4981;
-							type="ModuleHideTerrainObjects_F";
-							atlOffset=0.088121414;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="#filter";
-									expression="_this setVariable [""#filter"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=15;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="#hideLocally";
-									expression="_this setVariable [""#hideLocally"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item39
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={2572.4346,14.955177,1774.7668};
-							};
-							areaSize[]={22,0,22};
-							flags=1;
-							id=4982;
-							type="ModuleHideTerrainObjects_F";
-							atlOffset=0.95259953;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="#filter";
-									expression="_this setVariable [""#filter"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=15;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="#hideLocally";
-									expression="_this setVariable [""#hideLocally"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item40
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={2507.5408,15.424318,1651.1876};
-							};
-							areaSize[]={22,0,22};
-							flags=1;
-							id=4983;
-							type="ModuleHideTerrainObjects_F";
-							atlOffset=0.047888756;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="#filter";
-									expression="_this setVariable [""#filter"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=15;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="#hideLocally";
-									expression="_this setVariable [""#hideLocally"",_value]";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-					};
-					id=5770;
-					atlOffset=14.35569;
-				};
-			};
-			id=5736;
-			atlOffset=14.35569;
-		};
-		class Item375
-		{
 			dataType="Comment";
 			class PositionInfo
 			{
@@ -25008,7 +23532,7 @@ class Mission
 			id=5798;
 			atlOffset=0.60842991;
 		};
-		class Item376
+		class Item375
 		{
 			dataType="Group";
 			side="West";
@@ -26024,7 +24548,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item377
+		class Item376
 		{
 			dataType="Group";
 			side="West";
@@ -27538,7 +26062,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item378
+		class Item377
 		{
 			dataType="Group";
 			side="West";
@@ -29046,7 +27570,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item379
+		class Item378
 		{
 			dataType="Group";
 			side="West";
@@ -30744,7 +29268,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item380
+		class Item379
 		{
 			dataType="Group";
 			side="West";
@@ -31870,7 +30394,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item381
+		class Item380
 		{
 			dataType="Group";
 			side="West";
@@ -33380,7 +31904,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item382
+		class Item381
 		{
 			dataType="Group";
 			side="West";
@@ -34394,7 +32918,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item383
+		class Item382
 		{
 			dataType="Group";
 			side="West";
@@ -35498,7 +34022,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item384
+		class Item383
 		{
 			dataType="Group";
 			side="East";
@@ -36383,7 +34907,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item385
+		class Item384
 		{
 			dataType="Group";
 			side="East";
@@ -37694,7 +36218,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item386
+		class Item385
 		{
 			dataType="Group";
 			side="East";
@@ -39013,7 +37537,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item387
+		class Item386
 		{
 			dataType="Group";
 			side="East";
@@ -40332,7 +38856,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item388
+		class Item387
 		{
 			dataType="Group";
 			side="East";
@@ -41846,7 +40370,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item389
+		class Item388
 		{
 			dataType="Group";
 			side="East";
@@ -42846,7 +41370,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item390
+		class Item389
 		{
 			dataType="Group";
 			side="East";
@@ -43727,7 +42251,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item391
+		class Item390
 		{
 			dataType="Group";
 			side="Civilian";
@@ -44021,7 +42545,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item392
+		class Item391
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -44065,7 +42589,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item393
+		class Item392
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44080,14 +42604,7 @@ class Mission
 			type="Land_Water_pipe_EP1";
 			atlOffset=0.64727592;
 		};
-		class Item394
-		{
-			dataType="Layer";
-			name="Слой 753";
-			id=6442;
-			atlOffset=-6.27;
-		};
-		class Item395
+		class Item393
 		{
 			dataType="Layer";
 			name="пасхалко";
@@ -44694,7 +43211,7 @@ class Mission
 			id=6443;
 			atlOffset=0.71597338;
 		};
-		class Item396
+		class Item394
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44728,7 +43245,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item397
+		class Item395
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44762,7 +43279,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item398
+		class Item396
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -44807,7 +43324,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item399
+		class Item397
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44841,7 +43358,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item400
+		class Item398
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44874,6 +43391,145 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item399
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6840.752,34.919998,-39.148998};
+			};
+			id=6451;
+			type="FLS_Module_Base";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="FLS_BType";
+					expression="_this setVariable ['FLS_BType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="FLS_BRadius";
+					expression="_this setVariable ['FLS_BRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=600;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="FLS_BSide";
+					expression="_this setVariable ['FLS_BSide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=2;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item400
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={-595.92297,10.61,6216.668};
+			};
+			id=6453;
+			type="FLS_Module_Base";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="FLS_BType";
+					expression="_this setVariable ['FLS_BType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="FLS_BRadius";
+					expression="_this setVariable ['FLS_BRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=600;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="FLS_BSide";
+					expression="_this setVariable ['FLS_BSide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item401
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={368.60095,8.1421423,5920.2935};
+				angles[]={6.223258,0,6.1473598};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6456;
+			type="Land_JumpTarget_F";
+		};
+		class Item402
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4533.7197,23.645184,199.65106};
+				angles[]={0.013332213,0,0.0099990079};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6457;
+			type="Land_JumpTarget_F";
+			atlOffset=-3.8146973e-06;
 		};
 	};
 	class Connections
