@@ -22,4 +22,7 @@ CHBN_adjustColor = [0.5,0.7,1];
 5 enableChannel [true, false];
 
 
-// Spawn limits and trophy lifecycle are tracked by the database service.
+0 fadeRadio 0;
+enableRadio true;
+enableSentences false;
+enableSaving [false, false];

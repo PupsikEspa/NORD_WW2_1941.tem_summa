@@ -19,8 +19,11 @@ if(!hasInterface) exitWith {}; // If headless then exit
 
 [] execVM "intro\introtext.sqf";
 [] execVM "onPlayerConnected.sqf";
-[] execVM "scripts\countLocalFPS.sqf";
-// Personal arsenal lists are built by the server from the database.
+
+0 fadeRadio 0;
+enableRadio true;
+enableSentences false;
+enableSaving [false, false];
 
 
 
