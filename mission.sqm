@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=521;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=6650;
+		nextID=6662;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=923;
+		nextID=950;
 	};
 	class Camera
 	{
-		pos[]={4560.6284,89.829575,182.45473};
-		dir[]={-0.68860805,-0.72323418,-0.053012908};
-		up[]={-0.72111374,0.69058537,-0.055515498};
-		aside[]={-0.076763004,-1.0877557e-08,0.99707913};
+		pos[]={416.71762,25.449955,5902.6709};
+		dir[]={-0.72682244,-0.59647238,0.34062853};
+		up[]={-0.54013139,0.80260664,0.25313485};
+		aside[]={0.42437524,-3.0425144e-07,0.90551805};
 	};
 };
 binarizationWanted=0;
@@ -721,7 +721,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=403;
+		items=402;
 		class Item0
 		{
 			dataType="Layer";
@@ -849,6 +849,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="WhiteHead_06";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -860,7 +873,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -870,19 +883,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="WhiteHead_06";
 												};
 											};
 										};
@@ -1453,6 +1453,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -1464,7 +1477,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -1474,19 +1487,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
 												};
 											};
 										};
@@ -1894,7 +1894,7 @@ class Mission
 					name="6 ПСС";
 					class Entities
 					{
-						items=8;
+						items=4;
 						class Item0
 						{
 							dataType="Object";
@@ -2008,6 +2008,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Pettka";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2019,7 +2032,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2029,19 +2042,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Pettka";
 												};
 											};
 										};
@@ -2270,394 +2270,6 @@ class Mission
 								nAttributes=3;
 							};
 						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={350.23834,11.808905,5963.9766};
-								angles[]={6.2232571,5.4747992,6.2000446};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=5794;
-							type="Land_WoodenTable_large_F";
-							atlOffset=-0.0072526932;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item5
-						{
-							dataType="Group";
-							side="West";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={349.89099,11.357705,5963.064};
-										angles[]={0,0.74260271,0};
-									};
-									side="West";
-									flags=7;
-									class Attributes
-									{
-										name="pss7_garage";
-										ignoreByDynSimulGrid=1;
-										class Inventory
-										{
-											class uniform
-											{
-												typeName="ff_m36_feldbluse_roll";
-												isBackpack=0;
-											};
-											goggles="G_LIB_Watch1";
-											headgear="FF_Visor_SS";
-										};
-									};
-									id=5796;
-									type="B_Survivor_F";
-									atlOffset=0.0029993057;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="attachMarker";
-											expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="";
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="ENH_removeFromRemainsCollector";
-											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute4
-										{
-											property="ENH_doStop";
-											expression="if (!is3DEN && _value) then {doStop _this}";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="AfricanHead_01";
-												};
-											};
-										};
-										class Attribute6
-										{
-											property="unitName";
-											expression="_this setname _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Шварцнеггер";
-												};
-											};
-										};
-										class Attribute7
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="SCALAR";
-													value=0.89999998;
-												};
-											};
-										};
-										class Attribute8
-										{
-											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _varName = format ['ENH_fnc_ambientAnimations_side_%1', side _this];                    if (isNil _varName) then                    {                        missionNamespace setVariable [_varName, createGroup (side _this)];                    };                                        private _logic = (missionNamespace getVariable _varName) createUnit                    [                        'Logic',                        getPosATL _this,                        [],                        0,                        'NONE'                    ];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        [                            {                                (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                            }," \n "                            -1,                            1                        ];                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
-											class Value
-											{
-												class data
-												{
-													singleType="ARRAY";
-													class value
-													{
-														items=4;
-														class Item0
-														{
-															class data
-															{
-																singleType="STRING";
-																value="GUARD";
-															};
-														};
-														class Item1
-														{
-															class data
-															{
-																singleType="ARRAY";
-																class value
-																{
-																	items=2;
-																	class Item0
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="inbasemoves_handsbehindback1";
-																		};
-																	};
-																	class Item1
-																	{
-																		class data
-																		{
-																			singleType="STRING";
-																			value="inbasemoves_handsbehindback2";
-																		};
-																	};
-																};
-															};
-														};
-														class Item2
-														{
-															class data
-															{
-																singleType="BOOL";
-																value=0;
-															};
-														};
-														class Item3
-														{
-															class data
-															{
-																singleType="BOOL";
-																value=0;
-															};
-														};
-													};
-												};
-											};
-										};
-										class Attribute9
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Male01Ger";
-												};
-											};
-										};
-										class Attribute10
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										class Attribute11
-										{
-											property="ENH_allowSprint";
-											expression="[_this, _value] remoteExec ['allowSprint', _this]";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=0;
-												};
-											};
-										};
-										nAttributes=12;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=5795;
-							atlOffset=0.0029993057;
-						};
-						class Item6
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={349.3945,11.422777,5963.4604};
-								angles[]={6.2232571,3.9380975,6.2000446};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=5797;
-							type="WoodChair";
-							atlOffset=0.0019359589;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={336.78369,13.787708,5968.0737};
-								angles[]={0,0.66364396,0};
-							};
-							side="Empty";
-							class Attributes
-							{
-								name="pss7_garage_spawnplace";
-								disableSimulation=1;
-							};
-							id=5799;
-							type="Land_BatteryPack_01_closed_black_F";
-							atlOffset=0.84700012;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
 					};
 					id=1451;
 					atlOffset=1.0401506;
@@ -2782,6 +2394,19 @@ class Mission
 										};
 										class Attribute3
 										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Ivan";
+												};
+											};
+										};
+										class Attribute4
+										{
 											property="ENH_removeFromRemainsCollector";
 											expression="if (!is3DEN && _value) then {removeFromRemainsCollector [_this]}";
 											class Value
@@ -2793,7 +2418,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute4
+										class Attribute5
 										{
 											property="ENH_doStop";
 											expression="if (!is3DEN && _value) then {doStop _this}";
@@ -2803,19 +2428,6 @@ class Mission
 												{
 													singleType="BOOL";
 													value=1;
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="face";
-											expression="_this setface _value;";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="Ivan";
 												};
 											};
 										};
@@ -19018,18 +18630,6 @@ class Mission
 		};
 		class Item373
 		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={348.39801,11.85,5966.271};
-				angles[]={0,4.7371035,0};
-			};
-			title="Гараж СС 7 полк";
-			id=5798;
-			atlOffset=0.60842991;
-		};
-		class Item374
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -19158,7 +18758,7 @@ class Mission
 					};
 					id=6193;
 					type="B_Survivor_F";
-					atlOffset=0.03000021;
+					atlOffset=0.030000687;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20044,7 +19644,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item375
+		class Item374
 		{
 			dataType="Group";
 			side="West";
@@ -21558,7 +21158,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item376
+		class Item375
 		{
 			dataType="Group";
 			side="West";
@@ -23066,7 +22666,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item377
+		class Item376
 		{
 			dataType="Group";
 			side="West";
@@ -24764,7 +24364,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item378
+		class Item377
 		{
 			dataType="Group";
 			side="West";
@@ -25890,7 +25490,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item379
+		class Item378
 		{
 			dataType="Group";
 			side="West";
@@ -26309,6 +25909,7 @@ class Mission
 					};
 					id=6266;
 					type="B_Survivor_F";
+					atlOffset=4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -27400,7 +27001,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item380
+		class Item379
 		{
 			dataType="Group";
 			side="West";
@@ -28414,19 +28015,19 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item381
+		class Item380
 		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=11;
+				items=22;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={339.021,12.099361,5963.8867};
+						position[]={393.16202,5.1977057,5905.9048};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -28522,11 +28123,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={343.97406,11.674918,5968.9131};
+						position[]={398.11508,4.8870182,5910.9312};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						description="Солдат Вермахта";
@@ -28543,7 +28144,6 @@ class Mission
 					};
 					id=6290;
 					type="B_Survivor_F";
-					atlOffset=0.3200407;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28619,7 +28219,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={341.23288,11.726321,5966.2974};
+						position[]={395.3739,5.1816945,5908.3154};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -28715,7 +28315,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={342.67371,11.458127,5967.2358};
+						position[]={396.81473,5.0553975,5909.2539};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -28736,6 +28336,7 @@ class Mission
 					};
 					id=6292;
 					type="B_Survivor_F";
+					atlOffset=-4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28811,7 +28412,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={340.13785,11.987369,5964.9971};
+						position[]={394.27887,5.2042546,5907.0151};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -28907,7 +28508,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={342.28873,11.572836,5964.5723};
+						position[]={396.42975,5.1113315,5906.5903};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -29003,7 +28604,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={343.72958,11.559536,5965.5103};
+						position[]={397.87061,4.9655256,5907.5283};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -29024,7 +28625,6 @@ class Mission
 					};
 					id=6295;
 					type="B_Survivor_F";
-					atlOffset=0.063270569;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29113,7 +28713,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={341.1937,11.68932,5963.2715};
+						position[]={395.33472,5.1026106,5905.2896};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -29134,7 +28734,6 @@ class Mission
 					};
 					id=6296;
 					type="B_Survivor_F";
-					atlOffset=9.5367432e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29210,7 +28809,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={340.45355,11.74961,5962.4048};
+						position[]={394.59457,5.1010485,5904.4229};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -29306,7 +28905,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={344.67517,11.437445,5966.2129};
+						position[]={398.81619,4.8685923,5908.231};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -29327,6 +28926,7 @@ class Mission
 					};
 					id=6298;
 					type="B_Survivor_F";
+					atlOffset=-4.7683716e-07;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -29402,7 +29002,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={345.33984,11.354774,5967.2642};
+						position[]={399.48087,4.8097625,5909.2822};
 						angles[]={0,5.5062695,0};
 					};
 					side="West";
@@ -29422,6 +29022,1089 @@ class Mission
 						};
 					};
 					id=6403;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={397.05704,4.9644494,5904.6528};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6655;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={399.20792,4.7501554,5904.228};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6656;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={400.64877,4.663023,5905.166};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Медик Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6657;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={398.11288,4.8113461,5902.9272};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6658;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={397.37274,4.8322396,5902.0605};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6659;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={401.59436,4.5990353,5905.8687};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6660;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={402.25903,4.571579,5906.9199};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6661;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={395.94016,5.0018859,5903.542};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Медик Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6651;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={400.89325,4.6873565,5908.5688};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6652;
+					type="B_Survivor_F";
+					atlOffset=4.7683716e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={398.15207,4.9089904,5905.9531};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6653;
+					type="B_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="attachMarker";
+							expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Dwarden";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={399.5929,4.7963629,5906.8916};
+						angles[]={0,5.5062695,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Солдат Вермахта";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="ff_m40_feldbluse_roll";
+								isBackpack=0;
+							};
+							map="ItemMap";
+						};
+					};
+					id=6654;
 					type="B_Survivor_F";
 					class CustomAttributes
 					{
@@ -29518,7 +30201,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item382
+		class Item381
 		{
 			dataType="Group";
 			side="East";
@@ -30403,7 +31086,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item383
+		class Item382
 		{
 			dataType="Group";
 			side="East";
@@ -31714,7 +32397,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item384
+		class Item383
 		{
 			dataType="Group";
 			side="East";
@@ -33033,7 +33716,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item385
+		class Item384
 		{
 			dataType="Group";
 			side="East";
@@ -34352,7 +35035,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item386
+		class Item385
 		{
 			dataType="Group";
 			side="East";
@@ -35866,7 +36549,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item387
+		class Item386
 		{
 			dataType="Group";
 			side="East";
@@ -36866,7 +37549,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item388
+		class Item387
 		{
 			dataType="Group";
 			side="East";
@@ -37747,7 +38430,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item389
+		class Item388
 		{
 			dataType="Group";
 			side="Civilian";
@@ -38041,7 +38724,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item390
+		class Item389
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -38085,7 +38768,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item391
+		class Item390
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38100,7 +38783,7 @@ class Mission
 			type="Land_Water_pipe_EP1";
 			atlOffset=0.64727592;
 		};
-		class Item392
+		class Item391
 		{
 			dataType="Layer";
 			name="пасхалко";
@@ -38707,7 +39390,7 @@ class Mission
 			id=6443;
 			atlOffset=0.71597338;
 		};
-		class Item393
+		class Item392
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38741,7 +39424,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item394
+		class Item393
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38775,7 +39458,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item395
+		class Item394
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -38820,7 +39503,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item396
+		class Item395
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38854,7 +39537,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item397
+		class Item396
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38888,7 +39571,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item398
+		class Item397
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -38941,7 +39624,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item399
+		class Item398
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -38994,7 +39677,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item400
+		class Item399
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39010,7 +39693,7 @@ class Mission
 			id=6456;
 			type="Land_JumpTarget_F";
 		};
-		class Item401
+		class Item400
 		{
 			dataType="Object";
 			class PositionInfo
@@ -39027,7 +39710,7 @@ class Mission
 			type="Land_JumpTarget_F";
 			atlOffset=-3.8146973e-06;
 		};
-		class Item402
+		class Item401
 		{
 			dataType="Layer";
 			name="Точки-укрепления";
